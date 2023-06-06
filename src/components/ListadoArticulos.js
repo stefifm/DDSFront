@@ -4,7 +4,6 @@ const ListadoArticulos = ({ lista }) => {
   
   return (
     <div className="container mt-3">
-      <h1>Articulos</h1>
       <table className="table table-striped">
         <thead>
           <tr>

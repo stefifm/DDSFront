@@ -25,7 +25,8 @@ const Articulos = () => {
 
   return (
     <div className="container">
-      <h1>Formulario de Búsqueda</h1>
+     <h1>Articulos</h1>
+     <hr />
       <div className="card mb-3">
         <div className="card-body">
           <form onSubmit={handleSubmit(onSubmit)}>
