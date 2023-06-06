@@ -1,29 +1,46 @@
-import './App.css';
-import {Menu} from './components/Menu';
-import { Inicio } from './components/Inicio';
-import Articulos from './components/Articulos';
+import './App.css'
+import { Menu } from './components/Menu'
+import { Inicio } from './components/Inicio'
+import Articulos from './components/Articulos'
 
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
+import Clientes from './components/Clientes/Clientes'
 
 function App() {
   return (
     <div>
-
       <BrowserRouter>
-          <Menu />
-          <div className="divBody">
-            <Routes>
-              <Route path="/inicio" element={<Inicio />} />
-              <Route path="/articulos" element={<Articulos />} />
+        <Menu />
+        <div className='divBody'>
+          <Routes>
+            <Route
+              path='/inicio'
+              element={<Inicio />}
+            />
+            <Route
+              path='/articulos'
+              element={<Articulos />}
+            />
 
-              <Route path="*" element={<Navigate to="/inicio" replace />} />
-            </Routes>
-          </div>
-        </BrowserRouter>
+            <Route
+              path='/clientes'
+              element={<Clientes />}
+            />
 
-    
+            <Route
+              path='*'
+              element={
+                <Navigate
+                  to='/inicio'
+                  replace
+                />
+              }
+            />
+          </Routes>
+        </div>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
